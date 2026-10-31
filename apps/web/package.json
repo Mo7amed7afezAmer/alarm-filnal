@@ -1,0 +1,48 @@
+{
+  "name": "@alarm/web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@alarm/core": "workspace:*",
+    "@alarm/db": "workspace:*",
+    "@prisma/client": "5.22.0",
+    "@radix-ui/react-label": "^2.1.16",
+    "@radix-ui/react-select": "^2.3.8",
+    "@radix-ui/react-slot": "^1.4.0",
+    "@tanstack/react-table": "8.20.5",
+    "@tanstack/react-virtual": "3.10.9",
+    "bcryptjs": "2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jspdf": "3.0.3",
+    "jspdf-autotable": "5.0.2",
+    "lucide-react": "^1.55.0",
+    "next": "14.2.35",
+    "next-auth": "4.24.11",
+    "react": "^18",
+    "react-dom": "^18",
+    "recharts": "2.13.3",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.1",
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "exceljs": "4.4.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

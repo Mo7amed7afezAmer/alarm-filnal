@@ -1,0 +1,16 @@
+import { PrismaClient } from "@prisma/client";
+
+const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
+
+// Reuse one client across Next.js hot reloads.
+export const prisma = globalForPrisma.prisma ?? new PrismaClient();
+
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+
+export { PrismaClient };
+export type { Prisma } from "@prisma/client";
+export { PrismaAlarmRepository } from "./repository.js";
+export * from "./gmailAuth.js";
+export * from "./offices.js";
+export * from "./displayFilter.js";
+export * from "./hourlySettings.js";
